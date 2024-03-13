@@ -13,7 +13,7 @@ kernelspec:
   name: Octave
 ---
 
-# Breve introducción VHDL
+# Breve introducción a VHDL
 
 En cierta forma VHDL utiliza una sintaxis poco usual para describir los circuitos lógicos.
 La razón principal de ello es que VHDL se pensó originalmente como un lenguaje para la
