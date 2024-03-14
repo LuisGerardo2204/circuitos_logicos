@@ -321,6 +321,37 @@ apéndice no pretende ser un manual completo de VHDL. Si bien estudiamos casi to
 su simulación o para otros propósitos. Aun cuando las funciones omitidas no son necesarias
 para ninguno de los ejemplos expuestos en la obra, un lector que desee aprender más del uso de
 VHDL puede remitirse a libros especializados</p>
+<div class="highlight-VHDL notranslate"><div class="highlight"><pre><span></span><span class="c1">--------------------------------------------------------------------</span>
+<span class="c1">--- Ejemplo de una arquitectura en VHDL</span>
+<span class="c1">--------------------------------------------------------------------</span>
+
+<span class="k">library</span><span class="w"> </span><span class="nn">IEEE</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.numeric_std.</span><span class="k">all</span><span class="p">;</span>
+<span class="c1">-- use IEEE.std_logic_unsigned.all;</span>
+
+<span class="k">entity</span><span class="w"> </span><span class="nc">decodificador</span><span class="w"> </span><span class="k">is</span>
+<span class="w">    </span><span class="k">Port</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">entradas</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC_VECTOR</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">           </span><span class="n">salidas</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">STD_LOGIC_VECTOR</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="nc">decodificador</span><span class="p">;</span>
+
+<span class="k">architecture</span><span class="w"> </span><span class="nc">Behavioral</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">decodificador</span><span class="w"> </span><span class="k">is</span>
+
+<span class="k">begin</span>
+<span class="k">with</span><span class="w"> </span><span class="n">entradas</span><span class="w"> </span><span class="k">select</span>
+<span class="w">      </span><span class="n">salidas</span><span class="o">&lt;=</span><span class="w"> </span><span class="s">&quot;000&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;000&quot;</span><span class="p">,</span>
+<span class="w">           	    </span><span class="s">&quot;010&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;001&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;010&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;010&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;100&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;011&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;010&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;100&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;100&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;101&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;100&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;110&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;110&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;111&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;000&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="k">others</span><span class="p">;</span>
+<span class="k">end</span><span class="w"> </span><span class="nc">Behavioral</span><span class="p">;</span>
+</pre></div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
