@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Bibliografía &#8212; Apuntes de circuitos lógicos UPIIH IPN</title>
+    <title>Compuertas Lógicas en VHDL &#8212; Apuntes de circuitos lógicos UPIIH IPN</title>
   
   
   
@@ -65,10 +65,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Bibliografía';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'compuertas_VHDL';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="prev" title="Compuertas Lógicas en VHDL" href="compuertas_VHDL.html" />
+    <link rel="next" title="Bibliografía" href="Bibliograf%C3%ADa.html" />
+    <link rel="prev" title="Tipos de datos en VHDL" href="logicos_VHDL.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   </head>
@@ -163,9 +164,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="circuitos_logicos_VHDL.html">Formas de especificar el comportamiento de un circuito lógico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="logicos_VHDL.html">Tipos de datos en VHDL</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="compuertas_VHDL.html">Compuertas Lógicas en VHDL</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Compuertas Lógicas en VHDL</a></li>
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Bibliografía</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bibliograf%C3%ADa.html">Bibliografía</a></li>
 </ul>
 
     </div>
@@ -220,7 +221,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/Bibliografía.md" target="_blank"
+      <li><a href="_sources/compuertas_VHDL.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Descargar archivo fuente"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -289,7 +290,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -300,11 +303,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Bibliografía</h1>
+    <h1>Compuertas Lógicas en VHDL</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Compuertas Lógicas en VHDL</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-de-compuertas-en-vhdl">Práctica de compuertas en VHDL</a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -314,18 +327,99 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="bibliografia">
-<h1>Bibliografía<a class="headerlink" href="#bibliografia" title="Permalink to this heading">#</a></h1>
-<div class="docutils container" id="id1">
-<div class="citation" id="id3" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>MK17<span class="fn-bracket">]</span></span>
-<p>M. Morris. Mano and Charles. Kime. <em>Fundamentos de diseño lógico y computadoras.</em> Pearson education, Madrid, España., tercera edition, 2017. ISBN 9788483226889.</p>
-</div>
-<div class="citation" id="id2" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>TWM17<span class="fn-bracket">]</span></span>
-<p>Ronald J. Tocci, Neal S. Widmer, and Gregory L. Moss. <em>Digital systems: principles and applications.</em> Pearson education, New Jersey, U.S.A., twelfth edition, 2017. ISBN 9780134220130.</p>
-</div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="compuertas-logicas-en-vhdl">
+<h1>Compuertas Lógicas en VHDL<a class="headerlink" href="#compuertas-logicas-en-vhdl" title="Permalink to this heading">#</a></h1>
+<p>El objetivo de esta práctica es aprender a utilizar las compuertas lógicas básicas en VHDL. Las compuertas lógicas son el elemento básico de los sistemas digitales, en la <a class="reference internal" href="#tabla5"><span class="std std-numref">Tabla 5</span></a> se resume el comportamiento o salida de la compuertas básicas en funcion de sus entradas.</p>
+<table class="table table-left" id="tabla5">
+<caption><span class="caption-number">Tabla 5 </span><span class="caption-text">Tabla de verdad de las compuertas básicas</span><a class="headerlink" href="#tabla5" title="Enlace permanente a esta tabla">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>AND</p></th>
+<th class="head"><p>OR</p></th>
+<th class="head"><p>NAND</p></th>
+<th class="head"><p>NOR</p></th>
+<th class="head"><p>XOR</p></th>
+<th class="head"><p>XNOR</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>0</strong></p></td>
+<td><p><strong>0</strong></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>0</strong></p></td>
+<td><p><strong>1</strong></p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>1</strong></p></td>
+<td><p><strong>0</strong></p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>1</strong></p></td>
+<td><p><strong>1</strong></p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<p>En la figura <a class="reference internal" href="#compuertas"><span class="std std-numref">Figura 3</span></a> se muestra el circuito lógico para la prueba de múltiples compuertas lógicas. el código en VHDL para simular su comportamiento se muestra abajo.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="practica-de-compuertas-en-vhdl">
+<h1>Práctica de compuertas en VHDL<a class="headerlink" href="#practica-de-compuertas-en-vhdl" title="Permalink to this heading">#</a></h1>
+<figure class="align-default" id="compuertas">
+<a class="reference internal image-reference" href="_images/diagrama3.png"><img alt="_images/diagrama3.png" src="_images/diagrama3.png" style="height: 450px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figura 3 </span><span class="caption-text">Compuertas básicas, funciones almacenadas en un arreglo.</span><a class="headerlink" href="#compuertas" title="Enlace permanente a esta imagen">#</a></p>
+</figcaption>
+</figure>
+<div class="highlight-VHDL notranslate"><div class="highlight"><pre><span></span><span class="c1">--------------------------------</span>
+<span class="c1">--Compuertas básicas en VHDL</span>
+<span class="c1">-------------------------------</span>
+<span class="k">library</span><span class="w"> </span><span class="nn">IEEE</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="nn">IEEE.std_logic_1164.</span><span class="k">all</span><span class="p">;</span><span class="w"> </span><span class="c1">-- Librería para variables lógicas estandard</span>
+
+<span class="k">entity</span><span class="w"> </span><span class="nc">compuertas_basicas</span><span class="w"> </span><span class="k">is</span>
+<span class="w">   </span><span class="k">port</span><span class="p">(</span>
+<span class="w">   </span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="w"> </span><span class="o">:</span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span><span class="w"> </span><span class="c1">-- Entradas simples</span>
+<span class="w">   </span><span class="n">F</span><span class="w"> </span><span class="o">:</span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c1">-- Salidas almacenadas en un arreglo</span>
+<span class="w">   </span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="nc">compuertas_basicas</span><span class="p">;</span>
+
+<span class="k">architecture</span><span class="w"> </span><span class="nc">arq</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">compuertas_basicas</span><span class="w"> </span><span class="k">is</span>
+
+<span class="k">begin</span><span class="w"> </span>
+
+<span class="n">F</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="c1">-- Compuerta not</span>
+<span class="n">F</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="n">Y</span><span class="p">;</span><span class="w"> </span><span class="c1">-- Compuerta not</span>
+<span class="n">F</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Y</span><span class="p">;</span><span class="w"> </span><span class="c1">-- Compuerta AND</span>
+<span class="n">F</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="k">NAND</span><span class="w"> </span><span class="n">Y</span><span class="p">;</span><span class="w"> </span><span class="c1">-- Compuerta NAND</span>
+<span class="n">F</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">Y</span><span class="p">;</span><span class="w"> </span><span class="c1">-- Compuerta OR</span>
+<span class="n">F</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="k">NOR</span><span class="w"> </span><span class="n">Y</span><span class="p">;</span><span class="w"> </span><span class="c1">-- Compuerta NOR</span>
+<span class="n">F</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="k">XNOR</span><span class="w"> </span><span class="n">Y</span><span class="p">;</span><span class="w"> </span><span class="c1">-- Compuerta XOR</span>
+<span class="n">F</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="k">XOR</span><span class="w"> </span><span class="n">Y</span><span class="p">;</span><span class="w"> </span><span class="c1">-- Compuerta XNOR</span>
+
+<span class="k">end</span><span class="w"> </span><span class="nc">arq</span><span class="p">;</span><span class="w"> </span>
+</pre></div>
 </div>
 </section>
 
@@ -338,16 +432,16 @@ document.write(`
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "Octave"
         },
         kernelOptions: {
-            name: "python3",
+            name: "Octave",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'Octave'</script>
 
                 </article>
               
@@ -361,13 +455,22 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="compuertas_VHDL.html"
+       href="logicos_VHDL.html"
        title="página anterior">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Compuertas Lógicas en VHDL</p>
+        <p class="prev-next-title">Tipos de datos en VHDL</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="Bibliograf%C3%ADa.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Bibliografía</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
@@ -378,6 +481,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Compuertas Lógicas en VHDL</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-de-compuertas-en-vhdl">Práctica de compuertas en VHDL</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
